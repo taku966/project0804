@@ -6,15 +6,12 @@ import data from "@/assets/data.json"
 </script>
 
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <div class="container">
-      <h1 class="title-bar">Tutorial1 Home</h1>
-      <div class="content">
-        <div class="event-list">
-          <div v-for="d in data" :key="d.id">
-            <EventItem :eventData="d"/>
-          </div>
+  <div class="container">
+    <h1 class="title-bar">Tutorial1 Home</h1>
+    <div class="content">
+      <div class="event-list">
+        <div v-for="d in data" :key="d.id">
+          <EventItem :eventData="d"/>
         </div>
       </div>
     </div>
@@ -22,15 +19,16 @@ import data from "@/assets/data.json"
 </template>
 
 <style>
-body{
+body {
   margin: 0;
   background: steelblue;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
 }
+
 .title-bar {
   width: 100%;
   background: #353535;
@@ -40,7 +38,8 @@ body{
   text-align: center;
 
 }
-.event-item{
+
+.event-item {
   width: 10rem;
   background: #ffffff77;
   display: flex;
@@ -48,10 +47,12 @@ body{
   padding: 1rem;
   border-radius: 15px;
 }
-.event-item > img{
+
+.event-item > img {
   border-radius: 5px;
 }
-.event-list{
+
+.event-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
