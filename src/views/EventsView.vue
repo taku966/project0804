@@ -10,15 +10,20 @@ import data from "@/assets/data.json"
     <h1 class="title-bar">Tutorial1 Home</h1>
     <div class="content">
       <div class="event-list">
-        <div v-for="d in data" :key="d.id">
+        <router-link :to="`/events/${d.id}`" v-for="d in data" :key="d.id">
           <EventItem :eventData="d"/>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <style>
+.event-list > a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   margin: 0;
   background: steelblue;
