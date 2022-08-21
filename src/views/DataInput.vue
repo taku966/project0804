@@ -1,12 +1,21 @@
 <template>
- <div>
-
- </div>
+  <div>
+    <input v-model="entitles.value">
+  </div>
 </template>
 
 <script>
+//データの定義と保持
+//vueのlifecycle
 export default {
-  name: "DataInput"
+  data: () => ({
+    entitles: {
+      value: ""
+    }
+  }),
+  created() {
+    this.entitles = this.$store.state.entitles
+  }
 }
 </script>
 
