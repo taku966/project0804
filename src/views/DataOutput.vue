@@ -1,14 +1,13 @@
+<script setup>
+
+
+</script>
+
 <template>
  <div>
-
+   {{$store.getters.entitles.value }}
  </div>
 </template>
-
-<script>
-export default {
-  name: "DataOutput"
-}
-</script>
 
 <style scoped>
 
