@@ -1,14 +1,19 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        entitles: {
+            value: "初期値"
+        }
+    },
+    getters: {
+        entitles: (state) => state.entitles,
+    },
+    mutations: {
+        update(state, newEntitle){
+            state.entitles = newEntitle;
+        }
+    },
+    actions: {},
+    modules: {}
 })
