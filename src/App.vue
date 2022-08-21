@@ -5,6 +5,11 @@
     <router-link to="/about">About</router-link>
     |
     <router-link to="/events">Events</router-link>
+    |
+    <router-link to="/datainput">DataInput</router-link>
+    |
+    <router-link to="/dataoutput">DataOutput</router-link>
+
   </nav>
   <router-view/>
 </template>
@@ -31,3 +36,7 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>export default {
+  components: {}
+}
+</script>
